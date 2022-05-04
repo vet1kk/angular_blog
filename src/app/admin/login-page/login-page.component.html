@@ -1,0 +1,35 @@
+<form class="card" [formGroup]="form" (ngSubmit)="submit()">
+  <h2>Войти в панель администратора</h2>
+
+
+  <div
+    class="form-control"
+    [ngClass]="{invalid: form.get('email').touched && form.get('email').invalid }"
+  >
+    <label for="email">Email</label>
+    <input id="email" type="email" formControl=email>
+    <div
+      class="validation"
+      *ngIf="form.get('email').touched && form.get('email').invalid"
+    ><small>sgg</small>
+    </div>
+  </div>
+
+
+  <div class="form-control">
+    <label for="pass">Password</label>
+    <input id="pass" type="password" formControl=password>
+    <div class="validation">
+      <small>rgrg</small>
+    </div>
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-primary"
+    [disabled]="form.invalid"
+  >Войти
+  </button>
+
+
+</form>
