@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../../admin/shared/services/auth.service';
 
 @Component({
   selector: 'app-main-layout',
@@ -8,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainLayoutComponent implements OnInit {
 
-  constructor() {
+
+  constructor(public auth: AuthService) {
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+
   }
+
+  // goToAdmin() {
+  //   if (this.auth.isAuthenticated()) {
+  //     this.router.navigate(['/admin','dashboard'])
+  //   }else {
+  //     this.router.navigate(['/admin'])
+  //   }
+  // }
 
 }
+
