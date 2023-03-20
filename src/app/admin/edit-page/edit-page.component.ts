@@ -1,5 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
 import { PostsServices } from '../../shared/posts.services';
 import { Subscription, switchMap } from 'rxjs';
 import { Post } from '../../shared/interfaces';
@@ -16,6 +19,7 @@ export class EditPageComponent implements OnInit, OnDestroy {
   post!: Post
   submitted = false
   uSub!: Subscription
+  editor = ClassicEditor;
 
   constructor(private route: ActivatedRoute, private postService: PostsServices, private alert: AlertService) {
   }

@@ -14,7 +14,6 @@ import { SearchPipe } from '../shared/search.pipe';
 import { AlertComponent } from './shared/components/alert/alert.component';
 import { AlertService } from './shared/services/alert.service';
 
-
 const routes: Routes = [
   {
     path: '', component: AdminLayoutComponent, children: [

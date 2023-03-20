@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+
+import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+
 import { Post } from '../../shared/interfaces';
 import { PostsServices } from '../../shared/posts.services';
 import { AlertService } from '../shared/services/alert.service';
@@ -11,6 +14,7 @@ import { AlertService } from '../shared/services/alert.service';
 })
 export class CreatePageComponent implements OnInit {
   form!: FormGroup
+  editor = ClassicEditor;
 
   constructor(private postService: PostsServices, private  alertService: AlertService) {
   }

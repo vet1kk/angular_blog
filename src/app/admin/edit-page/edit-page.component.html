@@ -17,7 +17,7 @@
       </div>
 
       <div class="form-control">
-        <quill-editor formControlName="text"></quill-editor>
+        <ckeditor [editor]="editor" formControlName="text"></ckeditor>
       </div>
 
       <button type="submit" class="btn btn-primary" [disabled]="form.invalid || submitted">Обновить</button>

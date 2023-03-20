@@ -1,21 +1,16 @@
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { QuillModule } from 'ngx-quill';
-
+import {CKEditorModule} from "@ckeditor/ckeditor5-angular";
 
 @NgModule({
   declarations: [],
   imports: [
     HttpClientModule,
-    QuillModule.forRoot(),
-
-
+    CKEditorModule,
   ],
   exports: [
     HttpClientModule,
-    QuillModule,
-
-
+    CKEditorModule,
   ],
   providers: []
 })

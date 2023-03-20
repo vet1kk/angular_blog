@@ -15,7 +15,6 @@ import { SharedModule } from './shared/shared.module';
 import { AuthInterceptor } from './shared/auth.interceptor';
 import { environment } from '../environments/environment';
 
-
 registerLocaleData(ruLocale, 'ru')
 
 const INTERCEPTOR_PROVIDER: Provider = {
